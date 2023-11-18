@@ -26,6 +26,7 @@ public class LoginPageActivity extends AppCompatActivity {
     private EditText editTextUsernameField;
     private EditText editTextPasswordField;
     private Button loginPageButton;
+    private Button signupPageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,14 +41,10 @@ public class LoginPageActivity extends AppCompatActivity {
 
         editTextUsernameField = findViewById(R.id.loginPageUsernameField);
         editTextPasswordField = findViewById(R.id.loginPageUsernameField);
-        loginPageButton = findViewById(R.id.loginPageButton);
-
-        String email = String.valueOf(editTextUsernameField.getText());
-        String password = String.valueOf(editTextPasswordField.getText());
+        loginPageButton = findViewById(R.id.loginPageSignInButton);
+        signupPageButton = findViewById(R.id.loginPageSignUpButton);
 
         Log.d("LoginPageActivity", "Do you see this?");
-
-        System.out.println(email + password);
 
         Toast.makeText(LoginPageActivity.this, "DO YOU SEE THIS", Toast.LENGTH_LONG);
 
@@ -55,6 +52,19 @@ public class LoginPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                String email = String.valueOf(editTextUsernameField.getText());
+                String password = String.valueOf(editTextPasswordField.getText());
+
+                if (email.isEmpty()) {
+                    Toast.makeText(LoginPageActivity.this, "All fields need to be filled!",
+                            Toast.LENGTH_SHORT).show();
+                }
+                if (password.isEmpty()){
+                    Toast.makeText(LoginPageActivity.this, "All fields need to be filled!", Toast.LENGTH_SHORT).show();
+                }
+
+                String finalPassword = password;
+                String finalEmail = email;
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
@@ -67,11 +77,17 @@ public class LoginPageActivity extends AppCompatActivity {
                                     // If sign in fails, display a message to the user.
                                     Toast.makeText(LoginPageActivity.this, "Authentication failed. Do you have an account?",
                                             Toast.LENGTH_LONG).show();
-
-                                    System.out.println("Username and passwword: " + email + " " + password);
                                 }
                             }
                         });
+            }
+        });
+
+        signupPageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginPageActivity.this, SignupPageActivity.class);
+                startActivity(intent);
             }
         });
     }
