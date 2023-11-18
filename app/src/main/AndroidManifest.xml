@@ -12,13 +12,13 @@
         android:theme="@style/Theme.CommunityAlert"
         tools:targetApi="31">
         <activity
-            android:name=".SignupPage"
+            android:name="com.CommunityAlert.communityalert.activities.SignupPageActivity"
             android:exported="false" />
         <activity
-            android:name=".HomePage"
+            android:name="com.CommunityAlert.communityalert.activities.HomePageActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginPage"
+            android:name="com.CommunityAlert.communityalert.activities.LoginPageActivity"
             android:exported="false" />
         <activity
             android:name="com.CommunityAlert.communityalert.MainActivity"
