@@ -8,103 +8,108 @@
 
     <TextView
         android:id="@+id/loginPagePasswordTitle"
-        android:layout_width="0dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="70dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="40dp"
         android:text="Password:"
-        app:layout_constraintBaseline_toBaselineOf="@+id/loginPagePasswordField"
         app:layout_constraintEnd_toStartOf="@+id/loginPagePasswordField"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPageUsernameTitle" />
 
     <EditText
         android:id="@+id/loginPagePasswordField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
+        android:layout_width="180dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="46dp"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/loginPagePasswordTitle"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.661" />
+        app:layout_constraintTop_toBottomOf="@+id/loginPageUsernameField" />
 
     <TextView
         android:id="@+id/loginPageUsernameTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="40dp"
         android:text="Username:"
-        app:layout_constraintBottom_toTopOf="@+id/loginPagePasswordField"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText3"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/loginPageUsernameField"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPageLogo" />
 
     <EditText
         android:id="@+id/loginPageUsernameField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="320dp"
+        android:layout_width="190dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="36dp"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/loginPageUsernameTitle"
         app:layout_constraintTop_toBottomOf="@+id/loginPageLogo" />
 
     <TextView
         android:id="@+id/loginPageLocationTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="40dp"
         android:text="Location:"
-        app:layout_constraintBottom_toBottomOf="@+id/loginPageLocationField"
         app:layout_constraintEnd_toStartOf="@+id/loginPageLocationField"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/loginPageLocationField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="9dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/loginPageLocationTitle"
-        app:layout_constraintTop_toBottomOf="@+id/loginPagePasswordField" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPagePasswordTitle" />
 
     <ImageView
         android:id="@+id/loginPageLogo"
         android:layout_width="301dp"
         android:layout_height="351dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="42dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText3"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="55dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/communityalertlogotextpng" />
+        app:srcCompat="@drawable/communityalertlogotextpng"
+        tools:layout_editor_absoluteY="1dp" />
 
     <Button
-        android:id="@+id/loginPageButton"
-        android:layout_width="138dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="137dp"
-        android:layout_marginTop="51dp"
-        android:layout_marginEnd="137dp"
-        android:layout_marginBottom="36dp"
+        android:id="@+id/loginPageSignInButton"
+        android:layout_width="164dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="30dp"
         android:text="Log in"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/loginPageSignUpButton"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPageLocationTitle" />
+
+    <Button
+        android:id="@+id/loginPageSignUpButton"
+        android:layout_width="165dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="30dp"
+        android:text="Sign up if you don't have an account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginPageLocationField" />
+
+    <EditText
+        android:id="@+id/loginPageLocationField"
+        android:layout_width="181dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="54dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPagePasswordField" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
