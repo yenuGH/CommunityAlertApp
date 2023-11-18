@@ -32,11 +32,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:text="Username:"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText3"
+        app:layout_constraintEnd_toStartOf="@+id/loginPageUsernameField"
         tools:layout_editor_absoluteY="292dp" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/loginPageUsernameField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

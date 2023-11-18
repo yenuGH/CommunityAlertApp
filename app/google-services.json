@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "397888727944",
+    "project_id": "communityalert-afbf0",
+    "storage_bucket": "communityalert-afbf0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397888727944:android:f00d8bd0886c73b559a83d",
+        "android_client_info": {
+          "package_name": "com.example.communityalert"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo15TWSSK6NCic0SrFK3f6Ni7IBrwcon8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
