@@ -52,18 +52,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginPageLogo" />
 
-    <TextView
-        android:id="@+id/loginPageLocationTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="74dp"
-        android:layout_marginTop="59dp"
-        android:layout_marginEnd="40dp"
-        android:text="Location:"
-        app:layout_constraintEnd_toStartOf="@+id/loginPageLocationField"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPagePasswordTitle" />
-
     <ImageView
         android:id="@+id/loginPageLogo"
         android:layout_width="301dp"
@@ -80,36 +68,21 @@
         android:layout_width="164dp"
         android:layout_height="80dp"
         android:layout_marginStart="31dp"
-        android:layout_marginTop="50dp"
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="30dp"
         android:text="Log in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/loginPageSignUpButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPageLocationTitle" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/loginPageSignUpButton"
         android:layout_width="165dp"
         android:layout_height="79dp"
-        android:layout_marginTop="46dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="30dp"
         android:text="Sign up if you don't have an account"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPageLocationField" />
-
-    <EditText
-        android:id="@+id/loginPageLocationField"
-        android:layout_width="181dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="53dp"
-        android:layout_marginEnd="54dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPagePasswordField" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
