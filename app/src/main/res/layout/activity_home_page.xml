@@ -2,15 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/alert2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
+
+    <!-- from the coinflip -->
 
     <TextView
         android:id="@+id/configText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="36dp"
         android:gravity="center"
         android:text="Previous Community Alerts"
         android:textColor="@color/black"
@@ -19,33 +22,68 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/alertListView"
-        android:layout_width="403dp"
-        android:layout_height="472dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginBottom="29dp"
-        android:divider="@null"
-        android:dividerHeight="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/sendAlertBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/configText"
-        app:layout_constraintVertical_bias="0.729">
-
-    </ListView>
-
-    <!-- from the coinflip -->
     <Button
         android:id="@+id/sendAlertBtn"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/purple_200"
+        android:backgroundTint="@color/dark_purple"
         android:text="Send Alert"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/alertBG"
+        android:layout_width="352dp"
+        android:layout_height="69dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.302"
+        app:srcCompat="@drawable/rectangle" />
+
+    <ImageView
+        android:id="@+id/alertPersonImg"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/alertBG"
+        app:layout_constraintEnd_toEndOf="@+id/alertBG"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="@+id/alertBG"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.946"
+        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+    <TextView
+        android:id="@+id/alertText"
+        android:layout_width="255dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:text="Alert 1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/alertPersonImg"
+        app:layout_constraintEnd_toEndOf="@+id/alertBG"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/alertPersonImg"
+        app:layout_constraintTop_toTopOf="@+id/alertPersonImg"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="348dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alertBG"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/screenshot_2023_11_18_at_15_59_46" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
