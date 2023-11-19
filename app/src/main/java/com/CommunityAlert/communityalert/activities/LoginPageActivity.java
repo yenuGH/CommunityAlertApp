@@ -58,28 +58,53 @@ public class LoginPageActivity extends AppCompatActivity {
                 if (email.isEmpty()) {
                     Toast.makeText(LoginPageActivity.this, "All fields need to be filled!",
                             Toast.LENGTH_SHORT).show();
+                    return;
                 }
                 if (password.isEmpty()){
                     Toast.makeText(LoginPageActivity.this, "All fields need to be filled!", Toast.LENGTH_SHORT).show();
+                    return;
                 }
+
+                Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
+                startActivity(intent);
+                finish();
 
                 String finalPassword = password;
                 String finalEmail = email;
-                mAuth.signInWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    // Sign in success, update UI with the signed-in user's information
-                                    //Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
-                                    //startActivity(intent);
-                                } else {
-                                    // If sign in fails, display a message to the user.
-                                    Toast.makeText(LoginPageActivity.this, "Authentication failed. Do you have an account?",
-                                            Toast.LENGTH_LONG).show();
-                                }
-                            }
-                        });
+//                mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        if (task.isSuccessful()) {
+//                            // Sign in success, update UI with the signed-in user's information
+//                            Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
+//                            startActivity(intent);
+//                            Toast.makeText(LoginPageActivity.this, "Thank you for making the world a safer place!",
+//                                    Toast.LENGTH_LONG).show();
+//                            finish();
+//                        } else {
+//                            // If sign in fails, display a message to the user.
+//                            Toast.makeText(LoginPageActivity.this, "Authentication failed. Do you have an account?",
+//                                    Toast.LENGTH_LONG).show();
+//                        }
+//                    }
+//                });
+
+//                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        if (task.isSuccessful()) {
+//                            // Sign in success, update UI with the signed-in user's information
+//                            //Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
+//                            //startActivity(intent);
+//                            Toast.makeText(LoginPageActivity.this, "Thank you for making the world a safer place!",
+//                                    Toast.LENGTH_LONG).show();
+//                        } else {
+//                            // If sign in fails, display a message to the user.
+//                            Toast.makeText(LoginPageActivity.this, "Authentication failed. Do you have an account?",
+//                                    Toast.LENGTH_LONG).show();
+//                        }
+//                    }
+//                });
             }
         });
 
